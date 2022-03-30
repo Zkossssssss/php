@@ -1,18 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="p1.php" method="GET" align="center">
-<p>процент символов в тексте</p>
-<textarea rows="5" cols="50" name="text"><?php if(isset($_REQUEST['submit'])) echo $_REQUEST['text']; ?></textarea><br><br>
-<input type="submit" name="submit" value="Подсчитать">
-
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+    <form action="p1.php" method="post">
+    <select name="day">
+        <?php for ($i = 1; $i <= 31; $i++): ?>
+            <option><?=$i;?></option>
+        <?php endfor;?>
+    </select>
+    <select name="month">
+        <?php foreach ($month as $item): ?>
+            <option><?=$item;?></option>
+        <?php endforeach;?>
+    </select>
+    <select name="year">
+        <?php for ($i = 1990; $i <= 2025; $i++): ?>
+            <option><?=$i;?></option>
+        <?php endfor;?>
+    </select>
+    <input type="submit">
 </form>
-
-
-</body>
-</html>
+     
+ </body>
+ </html>
