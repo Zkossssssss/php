@@ -3,6 +3,7 @@ header('Content-Type: text/html; charset=utf-8');
 require_once 'student.php';
 require_once 'group.php';
 require_once 'dis.php';
+require_once 'teacher.php';
 
 function LoadStudents($group, $path) {
 	$file = nl2br(file_get_contents($path));
@@ -30,6 +31,9 @@ $g3->AddDiscipline($d2);
 $g3->AddDiscipline($d3);
 $g3->AddDiscipline($d4);
 
+$t1= new Teacher ('Юлия','Черепанова','Сергеевна');
+$t1->AddDiscipline($d1);
+$t1->display();
 LoadStudents($g3, 'i03.txt');
-$g3->display();
+//$g3->display();
 ?>
