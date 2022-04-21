@@ -4,10 +4,9 @@
 	return [
 		new Route('/my-page1/', 'page', 'show1'),
 		new Route('/my-page2/', 'page', 'show2'),
-		new Route('/p/', 'test', 'act1'),
-		new Route('/pok/', 'test', 'act2'),
-		new Route('/k/', 'test', 'act3'),
-		
+		new Route('/privet/', 'test', 'act1'),
+		new Route('/poka/', 'test', 'act2'),
+		new Route('/kak/', 'test', 'act3'),
+		new Route('/nums/:n1/:n2/:n3/', 'num', 'sum'),
 	];
-?>
-	
+?> 
